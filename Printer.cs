@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MainApp
+namespace Tetris
 {
     class Printer
     {
-        public static void Print(Figure test, int[,] field, int currX, int currY)
+        public static void Print(Figure myFigure, int[,] field, int currX, int currY)
         {
             while (true)
             {
@@ -17,13 +17,13 @@ namespace MainApp
                     Program.amIPrinting = true;
                     Console.Clear();
                     Console.WriteLine("Score:{0}", ScoreCounter.GetScore());
-                    printField(test, field, currX, currY);
+                    printField(myFigure, field, currX, currY);
                     Program.amIPrinting = false;
                     break;
                 }
             }
         }
-        public static void printField(Figure test, int[,] field, int currX, int currY)
+        public static void printField(Figure myFigure, int[,] field, int currX, int currY)
         {
 
 
@@ -44,11 +44,11 @@ namespace MainApp
                         Console.BackgroundColor = ConsoleColor.White;
                         Console.Write("  ");
                     }
-                    if (i < currX + test.size && i >= currX && j < currY + test.size && j >= currY)
+                    if (i < currX + myFigure.size && i >= currX && j < currY + myFigure.size && j >= currY)
                     {
-                        if (test.matrix[i - currX, j - currY] == 0 || field[i, j] == 0)
+                        if (myFigure.matrix[i - currX, j - currY] == 0 || field[i, j] == 0)
                         {
-                            Colors.ChangeColor(test.matrix[i - currX, j - currY] | field[i, j]);
+                            Colors.ChangeColor(myFigure.matrix[i - currX, j - currY] | field[i, j]);
                             Console.Write("  ");
                         }
                         else

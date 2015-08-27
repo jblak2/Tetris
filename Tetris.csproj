@@ -49,6 +49,7 @@
     <Compile Include="Figure.cs" />
     <Compile Include="FirstFigure.cs" />
     <Compile Include="FourthFigure.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="GenerateFigure.cs" />
     <Compile Include="GetFigureInfo.cs" />
     <Compile Include="Indexes.cs" />

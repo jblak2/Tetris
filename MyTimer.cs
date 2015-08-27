@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace MainApp
+namespace Tetris
 {
     class MyTimer
     {
@@ -21,7 +21,7 @@ namespace MainApp
         }
         public static void MoveToNextRow(object source, ElapsedEventArgs e)
         {
-            if (!Moves.canBeMoved("down", Program.test, Field.field, Indexes.currX, Indexes.currY))
+            if (!Moves.canBeMoved("down", Program.myFigure, Field.field, Indexes.currX, Indexes.currY))
             {
                 if (Indexes.currX == 0)
                 {
@@ -31,12 +31,12 @@ namespace MainApp
                 }
                 else
                 {
-                    FieldSaver.saveField(Program.test, Field.field, Indexes.currX, Indexes.currY);
+                    FieldSaver.saveField(Program.myFigure, Field.field, Indexes.currX, Indexes.currY);
                     LaneRemover.RemoveLane(Field.field, Indexes.currX, Indexes.currY);
-                    Program.test = GenerateFigure.Generate();
+                    Program.myFigure = GenerateFigure.Generate();
                     Indexes.currX = 0;
                     Indexes.currY = 0;
-                    if (!Validator.IsInRange(Program.test, Field.field, Indexes.currX, Indexes.currY)) 
+                    if (!Validator.IsInRange(Program.myFigure, Field.field, Indexes.currX, Indexes.currY)) 
                     {
                         Program.gameOver = true;
                         return;
@@ -47,7 +47,7 @@ namespace MainApp
             {
                 Indexes.currX++;
             }
-            Printer.Print(Program.test, Field.field, Indexes.currX, Indexes.currY);
+            Printer.Print(Program.myFigure, Field.field, Indexes.currX, Indexes.currY);
         }
     }
 }
