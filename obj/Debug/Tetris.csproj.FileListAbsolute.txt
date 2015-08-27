@@ -1,0 +1,2 @@
+C:\Users\user\Documents\Visual Studio 2013\Projects\Tetris\MainApp\bin\Debug\Tetris.exe.config
+C:\Users\user\Documents\Visual Studio 2013\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config

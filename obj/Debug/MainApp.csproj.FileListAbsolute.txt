@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\bin\Debug\MainApp.exe.config
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\bin\Debug\MainApp.exe
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\bin\Debug\MainApp.pdb
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\obj\Debug\MainApp.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\obj\Debug\MainApp.exe
+c:\users\user\documents\visual studio 2013\Projects\Tetris\MainApp\obj\Debug\MainApp.pdb
