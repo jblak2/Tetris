@@ -21,24 +21,24 @@ namespace Tetris
         }
         public static void MoveToNextRow(object source, ElapsedEventArgs e)
         {
-            if (!Moves.canBeMoved("down", Program.myFigure, Field.field, Indexes.currX, Indexes.currY))
+            if (!Moves.canBeMoved("down", FigureHolder.myFigure, Field.field, Indexes.currX, Indexes.currY))
             {
                 if (Indexes.currX == 0)
                 {
                     Console.WriteLine("GameOver");
-                    Program.gameOver = true;
+                    ImportantGameVariables.gameOver = true;
                     return;
                 }
                 else
                 {
-                    FieldSaver.saveField(Program.myFigure, Field.field, Indexes.currX, Indexes.currY);
+                    FieldSaver.saveField(FigureHolder.myFigure, Field.field, Indexes.currX, Indexes.currY);
                     LaneRemover.RemoveLane(Field.field, Indexes.currX, Indexes.currY);
-                    Program.myFigure = GenerateFigure.Generate();
+                    FigureHolder.myFigure = GenerateFigure.Generate();
                     Indexes.currX = 0;
                     Indexes.currY = 0;
-                    if (!Validator.IsInRange(Program.myFigure, Field.field, Indexes.currX, Indexes.currY)) 
+                    if (!Validator.IsInRange(FigureHolder.myFigure, Field.field, Indexes.currX, Indexes.currY)) 
                     {
-                        Program.gameOver = true;
+                        ImportantGameVariables.gameOver = true;
                         return;
                     }
                 }
@@ -47,7 +47,7 @@ namespace Tetris
             {
                 Indexes.currX++;
             }
-            Printer.Print(Program.myFigure, Field.field, Indexes.currX, Indexes.currY);
+            Printer.Print(FigureHolder.myFigure, Field.field, Indexes.currX, Indexes.currY);
         }
     }
 }

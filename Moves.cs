@@ -83,7 +83,7 @@ namespace Tetris
 
         public static void MakeAMove(Figure figure, int[,] field, int currX, int currY)
         {
-            if (Program.gameOver)
+            if (ImportantGameVariables.gameOver)
             {
                 return;
             }

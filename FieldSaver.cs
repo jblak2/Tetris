@@ -23,7 +23,7 @@ namespace Tetris
                         }
                         else
                         {
-                            Program.gameOver = true;
+                            ImportantGameVariables.gameOver = true;
                         }
                     }
 

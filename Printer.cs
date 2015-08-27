@@ -12,13 +12,13 @@ namespace Tetris
         {
             while (true)
             {
-                if (!Program.amIPrinting)
+                if (!ImportantGameVariables.amIPrinting)
                 {
-                    Program.amIPrinting = true;
+                    ImportantGameVariables.amIPrinting = true;
                     Console.Clear();
                     Console.WriteLine("Score:{0}", ScoreCounter.GetScore());
                     printField(myFigure, field, currX, currY);
-                    Program.amIPrinting = false;
+                    ImportantGameVariables.amIPrinting = false;
                     break;
                 }
             }

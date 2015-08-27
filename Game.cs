@@ -13,13 +13,13 @@ namespace Tetris
             GameTimer.StartTimer();
             Field.prepareField();
         }
-        public static void Play(bool gameOver)
+        public static void Play()
         {
-            while (!gameOver)
+            while (!ImportantGameVariables.gameOver)
             {
-                while (Console.KeyAvailable == true && !gameOver)
+                while (Console.KeyAvailable == true && !ImportantGameVariables.gameOver)
                 {
-                    Moves.MakeAMove(Program.myFigure, Field.field, Indexes.currX, Indexes.currY);
+                    Moves.MakeAMove(FigureHolder.myFigure, Field.field, Indexes.currX, Indexes.currY);
                 }
             }
         }

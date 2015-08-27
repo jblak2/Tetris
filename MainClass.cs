@@ -8,17 +8,13 @@ using System.Timers;
 namespace Tetris
 {
 
-    class Program
+    class MainClass
     {
-        public static bool amIPrinting = false;
-        public static Figure myFigure = GenerateFigure.Generate();
-        public static bool gameOver = false;
-
         static void Main(string[] args)
         {
             MyTimer GameTimer = new MyTimer();
             Game.StartGame(GameTimer);
-            Game.Play(gameOver);
+            Game.Play();   
         }
     }
 }
